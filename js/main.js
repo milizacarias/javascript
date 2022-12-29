@@ -1,8 +1,15 @@
+const IVA = 21;
+function calcularIva(precioSinIva) {
+  return precioSinIva + (precioSinIva * IVA) / 100;
+}
+
 let precioProducto;
 do {
-  precioProducto = parseFloat(
-    prompt("ingrese precio de producto, para terminar ingrese STOP")
+  precioProductoIngresado = prompt(
+    "ingrese precio de producto, para terminar ingrese STOP"
   );
+  const precioProducto = parseFloat(precioProductoIngresado);
   if (precioProducto > 0) {
+    alert("el precio con IVA es: " + calcularIva(precioProducto));
   }
-} while (precioProducto !== "STOP");
+} while (precioProductoIngresado !== "STOP");
