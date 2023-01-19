@@ -1,15 +1,42 @@
-const IVA = 21;
-function calcularIva(precioSinIva) {
-  return precioSinIva + (precioSinIva * IVA) / 100;
-}
+const ejercicios = [
+  {
+    nombre: "back squat",
+    tren: "inferior",
+    musculo: "cuadriceps",
+    rm: "100",
+  },
 
-let precioProducto;
-do {
-  precioProductoIngresado = prompt(
-    "ingrese precio de producto, para terminar ingrese STOP"
-  );
-  const precioProducto = parseFloat(precioProductoIngresado);
-  if (precioProducto > 0) {
-    alert("el precio con IVA es: " + calcularIva(precioProducto));
+  {
+    nombre: "deadlift",
+    tren: "inferior",
+    musculo: "femorales",
+    rm: "200",
+  },
+
+  {
+    nombre: "shoulder press",
+    tren: "superior",
+    musculo: "Hombros",
+    rm: "50",
+  },
+
+  {
+    nombre: "push jerk",
+    tren: "superior",
+    musculo: "hombros",
+    rm: "65",
+  },
+
+  {
+    nombre: "dominadas",
+    tren: "superior",
+    musculo: "dorsales",
+    rm: "10",
+  },
+];
+
+ejercicios.forEach((ejercicios) => {
+  if (ejercicios.rm < 100) {
+    console.log(ejercicios.nombre);
   }
-} while (precioProductoIngresado !== "STOP");
+});
