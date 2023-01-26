@@ -1,0 +1,94 @@
+const IVA = 21;
+function calcularIva(precioSinIva) {
+  return precioSinIva + (precioSinIva * IVA) / 100;
+}
+
+let precioProducto;
+do {
+  precioProductoIngresado = prompt(
+    "ingrese precio de producto, para terminar ingrese STOP"
+  );
+  const precioProducto = parseFloat(precioProductoIngresado);
+  if (precioProducto > 0) {
+    alert("el precio con IVA es: " + calcularIva(precioProducto));
+  }
+} while (precioProductoIngresado !== "STOP");
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Segunda pre entrega Mili Zacarias</h1>
+    <h2>Listado de ejercicios de entrenamiento</h2>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+const ejercicios = [
+  {
+    nombre: "back squat",
+    tren: "inferior",
+    musculo: "cuadriceps",
+    rm: "100",
+  },
+
+  {
+    nombre: "deadlift",
+    tren: "inferior",
+    musculo: "femorales",
+    rm: "200",
+  },
+
+  {
+    nombre: "shoulder press",
+    tren: "superior",
+    musculo: "Hombros",
+    rm: "50",
+  },
+
+  {
+    nombre: "push jerk",
+    tren: "superior",
+    musculo: "hombros",
+    rm: "65",
+  },
+
+  {
+    nombre: "dominadas",
+    tren: "superior",
+    musculo: "dorsales",
+    rm: "10",
+  },
+];
+
+ejercicios.forEach((ejercicios) => {
+  if (ejercicios.rm < 100) {
+    console.log(ejercicios.nombre);
+  }
+});
+
